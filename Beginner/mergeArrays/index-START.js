@@ -24,6 +24,6 @@ function mergeArrays(...arrays) {
 
     return jointArray.filter((el,i) => jointArray.indexOf(el) === i)
 }
-
+// [1,2,1,3]
 
 module.exports = mergeArrays
