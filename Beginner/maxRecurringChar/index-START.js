@@ -18,11 +18,7 @@ function maxRecurringChar(text) {
     let maxChar = ''
     let maxVal = 0
     for(let char of text){
-        if(!obj[char]){
-            obj[char] = 1
-        } else {
-            charMap[char]++
-        }
+        obj[char] = obj[char] + 1 || 1
     }
 
     for(let char in obj){
@@ -31,7 +27,7 @@ function maxRecurringChar(text) {
             maxChar = char
         }
     }
-        return maxChar
+        return obj
 
     // let keys = Object.keys(obj)
     // let charValues = Object.values(obj)
